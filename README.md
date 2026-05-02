@@ -21,7 +21,8 @@ The entire authentication flow is implemented using Spring Security, including:
 
 1. Open your IDE and locate the **Gradle** panel  
 2. Run: GenerateProto
-3.  Start the main service
+3. cd MainService And run gradlew.bat bootRun --args="--seed_user" and gradlew.bat bootRun --args="--seed_cn"
+5.  Start the main service
 
 ---
 
