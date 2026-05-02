@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+package currency;
+
+option java_package = "com.pouya.common.grpc";
+option java_multiple_files = true;
+option java_outer_classname = "CurrencyProto";
+message CurrencyResponse {
+  int64 id = 1;
+  string name = 2;
+  string symbol = 3;
+  double  rate = 4;
+}
+
+service CurrencyService {
+  rpc GetCurrencyById (CurrencyRequest) returns (CurrencyResponse);
+  rpc ListCurrencies (Empty) returns (CurrencyListResponse);
+}
+
+message CurrencyRequest {
+  int64 id = 1;
+}
+
+message CurrencyListResponse {
+  repeated CurrencyResponse currencies = 1;
+}
+
+message Empty {}

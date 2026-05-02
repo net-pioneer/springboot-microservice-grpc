@@ -1,0 +1,5 @@
+rootProject.name = 'MicroService'
+
+include 'CommonLibrary'
+include 'MainService'
+include 'OrdersService'

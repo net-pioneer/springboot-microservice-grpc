@@ -1,0 +1,5 @@
+.idea
+.gradle
+CommonLibrary/build
+MainService/build
+OrdersService/build

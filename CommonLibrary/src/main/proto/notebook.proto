@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package notebook;
+
+option java_multiple_files = true;
+option java_package = "com.pouya.common.grpc";
+option java_outer_classname = "NotebookProto";
+
+service NotebookService {
+  rpc GetNotebooks (EmptyRequest) returns (NotebookListResponse);
+}
+
+message EmptyRequest {}
+
+message NotebookResponse {
+  int64 id = 1;
+  string name = 2;
+  string phone = 3;
+}
+
+message NotebookListResponse {
+  repeated NotebookResponse notebooks = 1;
+}
